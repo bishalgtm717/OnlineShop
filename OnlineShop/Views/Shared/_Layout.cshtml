@@ -55,9 +55,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="Customer" asp-controller="Home" asp-action="Index">OnlineShop</a>
+                <a class="navbar-brand text-white" asp-area="Customer" asp-controller="Home" asp-action="Index">GharDailoSewa</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -68,19 +68,35 @@
                         @if (userRole == "Super user")
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="ProductTypes" asp-action="Index">Product Type</a>
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="ProductTypes" asp-action="Index">Product Type</a>
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="SpecialTag" asp-action="Index">Tag Name</a>
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="SpecialTag" asp-action="Index">Tag Name</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="Role" asp-action="Index">Role</a>
+                            </li>
+                        }
+                         @if (userRole == "Admin")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="ProductTypes" asp-action="Index">Product Type</a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="SpecialTag" asp-action="Index">Tag Name</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
                             </li>
                         }
                         
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Customer" asp-controller="Home" asp-action="Cart">
+                            <a class="nav-link text-white" asp-area="Customer" asp-controller="Home" asp-action="Cart">
                                 <i class="fas fa-shopping-cart"></i>
                                 (@count)
                             </a>
@@ -144,3 +160,6 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+
+

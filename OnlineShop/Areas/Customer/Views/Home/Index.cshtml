@@ -5,6 +5,20 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+<style>
+
+.btn-success {
+        color: #fff;
+        background-color: #fda032;
+        border-color: #fda032;
+        border-radius:30%;
+    }
+
+    .btn-success:focus, .btn-success.focus {
+        -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+    }
+</style>
 <br/><br/>
 <div class="row">
     @foreach (var product in Model)
@@ -22,7 +36,7 @@
                         <div class="btn-group">
                             <label style="font-size: 20px;color: #a51313"><b>Price : @product.Price</b></label>
                         </div>
-                        <a asp-action="Detail" asp-controller="Home" asp-route-id="@product.Id" class="btn btn-success pull-right btn-outline-info">Deatils</a>
+                        <a asp-action="Detail" asp-controller="Home" asp-route-id="@product.Id" class="btn btn-success pull-right">Details</a>
                     </div>
                 </div>
             </div>
