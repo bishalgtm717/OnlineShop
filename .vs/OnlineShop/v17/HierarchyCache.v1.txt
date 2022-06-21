@@ -1,0 +1,498 @@
+﻿++Solution 'OnlineShop' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:OnlineShop.sln
+++OnlineShop
+i:{00000000-0000-0000-0000-000000000000}:OnlineShop
+++Connected Services 
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1112
+++Dependencies
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1111
+++Properties
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\properties\
+++wwwroot
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\
+++Areas
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\
+++Admin
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\
+++Controllers
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\controllers\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\controllers\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\controllers\
+++ProductController.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\controllers\productcontroller.cs
+++ProductTypesController.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\controllers\producttypescontroller.cs
+++RoleController.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\controllers\rolecontroller.cs
+++SpecialTagController.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\controllers\specialtagcontroller.cs
+++Models
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\models\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\
+++Views
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\
+++Product
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\product\
+++Create.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\product\create.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\producttypes\create.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\role\create.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\user\create.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\specialtag\create.cshtml
+++Delete.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\product\delete.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\producttypes\delete.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\role\delete.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\user\delete.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\specialtag\delete.cshtml
+++Details.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\product\details.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\producttypes\details.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\user\details.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\specialtag\details.cshtml
+++Edit.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\product\edit.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\producttypes\edit.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\role\edit.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\user\edit.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\specialtag\edit.cshtml
+++Index.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\product\index.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\producttypes\index.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\role\index.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\home\index.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\user\index.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\index.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\specialtag\index.cshtml
+++ProductTypes
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\producttypes\
+++Role
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\role\
+++Assign.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\role\assign.cshtml
+++AssignUserRole.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\role\assignuserrole.cshtml
+++SpecialTag
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\specialtag\
+++_ViewImports.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\_viewimports.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\_viewimports.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\_viewimports.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\_viewimports.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\_viewimports.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\views\_viewstart.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\_viewstart.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\_viewstart.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\_viewstart.cshtml
+++Customer
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\
+++HomeController.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\controllers\homecontroller.cs
+++OrderController.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\controllers\ordercontroller.cs
+++UserController.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\controllers\usercontroller.cs
+++Home
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\home\
+++Cart.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\home\cart.cshtml
+++Detail.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\home\detail.cshtml
+++Privacy.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\home\privacy.cshtml
+++Order
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\order\
+++Checkout.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\order\checkout.cshtml
+++User
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\user\
+++Active.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\user\active.cshtml
+++Locout.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\customer\views\user\locout.cshtml
+++Identity
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\
+++Pages
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\
+++Account
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\
+++Manage
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\
+++_Layout.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\_layout.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\_layout.cshtml
+++_ManageNav.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\_managenav.cshtml
+++_StatusMessage.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\_statusmessage.cshtml
+++ChangePassword.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\changepassword.cshtml
+++DeletePersonalData.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\deletepersonaldata.cshtml
+++Disable2fa.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\disable2fa.cshtml
+++DownloadPersonalData.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\downloadpersonaldata.cshtml
+++EnableAuthenticator.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\enableauthenticator.cshtml
+++ExternalLogins.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\externallogins.cshtml
+++GenerateRecoveryCodes.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\generaterecoverycodes.cshtml
+++ManageNavPages.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\managenavpages.cs
+++PersonalData.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\personaldata.cshtml
+++ResetAuthenticator.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\resetauthenticator.cshtml
+++SetPassword.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\setpassword.cshtml
+++TwoFactorAuthentication.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\twofactorauthentication.cshtml
+++AccessDenied.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\accessdenied.cshtml
+++ConfirmEmail.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\confirmemail.cshtml
+++ExternalLogin.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\externallogin.cshtml
+++ForgotPassword.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\forgotpassword.cshtml
+++ForgotPasswordConfirmation.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\forgotpasswordconfirmation.cshtml
+++Lockout.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\lockout.cshtml
+++Login.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\login.cshtml
+++LoginWith2fa.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\loginwith2fa.cshtml
+++LoginWithRecoveryCode.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\loginwithrecoverycode.cshtml
+++Logout.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\logout.cshtml
+++Logout.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\logout.cshtml.cs
+++Register.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\register.cshtml
+++Register.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\register.cshtml.cs
+++ResetPassword.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\resetpassword.cshtml
+++ResetPasswordConfirmation.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\resetpasswordconfirmation.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\_validationscriptspartial.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\_validationscriptspartial.cshtml
+++Error.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\error.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\error.cshtml
+++IdentityHostingStartup.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\identityhostingstartup.cs
+++Data
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\
+++Migrations
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\
+++ApplicationDbContext.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\applicationdbcontext.cs
+++ApplicationUser.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\applicationuser.cs
+++ErrorViewModel.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\errorviewmodel.cs
+++Order.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\order.cs
+++OrderDetails.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\orderdetails.cs
+++Products.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\products.cs
+++ProductTypes.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\producttypes.cs
+++SessionUserVm.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\sessionuservm.cs
+++SpecialTag.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\models\specialtag.cs
+++Utility
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\utility\
+++SessionExtensions.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\utility\sessionextensions.cs
+++Shared
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\
+++_ButtonPartial.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\_buttonpartial.cshtml
+++_CookieConsentPartial.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\_cookieconsentpartial.cshtml
+++_LoginPartial.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\_loginpartial.cshtml
+++_PartialView.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\_partialview.cshtml
+++_TagPageButtonPartial.cshtml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\views\shared\_tagpagebuttonpartial.cshtml
+++appsettings.json
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\appsettings.json
+++Program.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\program.cs
+++ScaffoldingReadMe.txt
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\scaffoldingreadme.txt
+++Startup.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\startup.cs
+++No service dependencies discovered
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1113
+++Analyzers
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:analyzers
+++Packages
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:packages
+++PublishProfiles
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\properties\publishprofiles\
+++launchSettings.json
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\properties\launchsettings.json
+++css
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\css\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\
+++Images
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\
+++js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\js\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\
+++favicon.ico
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\favicon.ico
+++RoleUserVm.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\models\roleuservm.cs
+++UserRoleMaping.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\admin\models\userrolemaping.cs
+++ChangePassword.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\changepassword.cshtml.cs
+++DeletePersonalData.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\deletepersonaldata.cshtml.cs
+++Disable2fa.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\disable2fa.cshtml.cs
+++DownloadPersonalData.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\downloadpersonaldata.cshtml.cs
+++EnableAuthenticator.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\enableauthenticator.cshtml.cs
+++ExternalLogins.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\externallogins.cshtml.cs
+++GenerateRecoveryCodes.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\generaterecoverycodes.cshtml.cs
+++Index.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\index.cshtml.cs
+++PersonalData.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\personaldata.cshtml.cs
+++ResetAuthenticator.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\resetauthenticator.cshtml.cs
+++SetPassword.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\setpassword.cshtml.cs
+++TwoFactorAuthentication.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\manage\twofactorauthentication.cshtml.cs
+++AccessDenied.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\accessdenied.cshtml.cs
+++ConfirmEmail.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\confirmemail.cshtml.cs
+++ExternalLogin.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\externallogin.cshtml.cs
+++ForgotPassword.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\forgotpassword.cshtml.cs
+++ForgotPasswordConfirmation.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\forgotpasswordconfirmation.cshtml.cs
+++Lockout.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\lockout.cshtml.cs
+++Login.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\login.cshtml.cs
+++LoginWith2fa.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\loginwith2fa.cshtml.cs
+++LoginWithRecoveryCode.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\loginwithrecoverycode.cshtml.cs
+++ResetPassword.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\resetpassword.cshtml.cs
+++ResetPasswordConfirmation.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\account\resetpasswordconfirmation.cshtml.cs
+++Error.cshtml.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\areas\identity\pages\error.cshtml.cs
+++00000000000000_CreateIdentitySchema.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\00000000000000_createidentityschema.cs
+++20190228123654_addProductTableIntoDatabase.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190228123654_addproducttableintodatabase.cs
+++20190312141414_specialtagsmodeladd.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190312141414_specialtagsmodeladd.cs
+++20190317115746_addproductmodel.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190317115746_addproductmodel.cs
+++20190514195844_addedOrderandOrderDetailstable.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190514195844_addedorderandorderdetailstable.cs
+++20190907182726_addednewfeildintousertable.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190907182726_addednewfeildintousertable.cs
+++ApplicationDbContextModelSnapshot.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\applicationdbcontextmodelsnapshot.cs
+++appsettings.Development.json
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\appsettings.development.json
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:c:\users\gauta\.nuget\packages\microsoft.aspnetcore.mvc.analyzers\2.2.0\analyzers\dotnet\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:c:\users\gauta\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:c:\users\gauta\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:c:\users\gauta\.nuget\packages\microsoft.entityframeworkcore.analyzers\2.2.0\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++AlertifyJS (1.11.2)
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1117
+++Microsoft.AspNetCore.App (2.2.0)
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1116
+++Microsoft.AspNetCore.Razor.Design (2.2.0)
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1115
+++Microsoft.NETCore.App (2.2.0)
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1118
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (2.2.4)
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1119
+++X.PagedList.Mvc.Core (7.6.0)
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:>1120
+++CustomProfile.pubxml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\properties\publishprofiles\customprofile.pubxml
+++CustomProfile1.pubxml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\properties\publishprofiles\customprofile1.pubxml
+++FolderProfile.pubxml
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\properties\publishprofiles\folderprofile.pubxml
+++site.css
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\css\site.css
+++10.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\10.jpg
+++269797405_449250113473059_8362678964050098928_n.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\269797405_449250113473059_8362678964050098928_n.jpg
+++6.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\6.jpg
+++7.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\7.jpg
+++718mehhjxfl._ac_sl1500__1_1_1.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\718mehhjxfl._ac_sl1500__1_1_1.jpg
+++8.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\8.jpg
+++applle.jpeg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\applle.jpeg
+++dell1.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\dell1.jpg
+++dell2.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\dell2.jpg
+++dell3.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\dell3.jpg
+++giant_14465.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\giant_14465.jpg
+++hp1.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\hp1.jpg
+++hp2.jpeg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\hp2.jpeg
+++IMG_20141222_210933.JPG
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\img_20141222_210933.jpg
+++IMG_6116.JPG
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\img_6116.jpg
+++instock-logo.png
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\instock-logo.png
+++noimage.PNG
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\noimage.png
+++notinstock.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\notinstock.jpg
+++s1.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\s1.jpg
+++TB1f4LzNFXXXXalapXXXXXXXXXX_!!0-item_pic.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\tb1f4lznfxxxxalapxxxxxxxxxx_!!0-item_pic.jpg
+++wp6311384-lion-angry-mobile-wallpapers.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\wp6311384-lion-angry-mobile-wallpapers.jpg
+++site.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\js\site.js
+++bootstrap
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\
+++jquery
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery\
+++jquery-validation
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation-unobtrusive\
+++00000000000000_CreateIdentitySchema.Designer.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\00000000000000_createidentityschema.designer.cs
+++20190228123654_addProductTableIntoDatabase.Designer.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190228123654_addproducttableintodatabase.designer.cs
+++20190312141414_specialtagsmodeladd.Designer.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190312141414_specialtagsmodeladd.designer.cs
+++20190317115746_addproductmodel.Designer.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190317115746_addproductmodel.designer.cs
+++20190514195844_addedOrderandOrderDetailstable.Designer.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190514195844_addedorderandorderdetailstable.designer.cs
+++20190907182726_addednewfeildintousertable.Designer.cs
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\data\migrations\20190907182726_addednewfeildintousertable.designer.cs
+++dist
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery\dist\
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\license
+++alertify.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery\alertify.js
+++LICENSE.txt
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery\license.txt
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++jquery.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++bootstrap.css
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++bootstrap.css.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap-grid.css.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-reboot.css.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap.bundle.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.js.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap-grid.min.css.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-reboot.min.css.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap.bundle.js.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.min.js.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.bundle.min.js.map
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+++download.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\download.jpg
+++images.png
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\images.png
+++images.jpg
+i:{e20f23bd-c511-4098-808e-57746bff01ce}:e:\dot net project\onlineshop-master\onlineshop\wwwroot\images\images.jpg

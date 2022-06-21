@@ -4,7 +4,7 @@
     ViewData["Title"] = "Cart";
 }
 
-<h1>Your Cart</h1>
+<h4>Your Cart</h4>
 
 <br/>
 <div class="row">
@@ -45,8 +45,8 @@
         <a asp-action="Index" asp-controller="Home" class="btn btn-success">Back to Home</a>
     </div>
     <div class="col-6 text-right">
-        <h3>Total Amount</h3>
-        <h3>Grant Total : @Model.Sum(c=>c.Price) </h3>
+        <p class="text-dark">Total Amount</p>
+        <p class="text-dark">Grant Total : @Model.Sum(c=>c.Price) </p>
         <a asp-area="Customer" asp-action="Checkout" asp-controller="Order" class="btn btn-info">Process to Checkout</a>
     </div>
 </div>

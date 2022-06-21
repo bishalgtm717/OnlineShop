@@ -22,8 +22,8 @@ namespace OnlineShop.Areas.Admin.Controllers
         [AllowAnonymous]
         public IActionResult Index()
         {
-            //var data = _db.ProductTypes.ToList();
-            return View(_db.ProductTypes.ToList());
+            var data = _db.ProductTypes.ToList();
+            return View(data);
         }
 
         //GET Create Action Method
