@@ -5,3 +5,4 @@
 /.vs
 /OnlineShop/bin/Debug/netcoreapp2.2
 /OnlineShop/obj
+/OnlineShop/appsettings.json
