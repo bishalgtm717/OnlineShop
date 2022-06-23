@@ -12,7 +12,7 @@ using OnlineShop.Data;
 namespace OnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Super user")]
+    [Authorize(Roles = "Super User")]
     public class RoleController : Controller
     {
         RoleManager<IdentityRole> _roleManager;

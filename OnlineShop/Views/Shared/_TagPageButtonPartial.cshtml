@@ -4,12 +4,26 @@
 *@
 <td style="width: 150px">
     <div class="btn-group">
-        <a asp-action="Edit" asp-controller="SpecialTag" class="btn btn-primary" asp-route-id="@Model">
-            <i class="far fa-edit"></i>
-        </a>
-        <a asp-action="Details" asp-controller="SpecialTag" class="btn btn-success" asp-route-id="@Model"><i class="fas fa-list-ul"></i></a>
+
+          <div class="col ml-1"> 
+          <a asp-action="Edit" asp-controller="SpecialTag" class="btn btn-primary" asp-route-id="@Model">
+            <i class="fas fa-edit mx-3"></i>
+        </a> 
+        </div>
+        <div class="col mx-2"> 
+        <a asp-action="Details" asp-controller="SpecialTag" class="btn btn-success" asp-route-id="@Model"><i class="fas fa-eye mx-3"></i></a>
+
+            </div>
+        <div class="col ml-1">
+      
+        
         <a asp-action="Delete" asp-controller="SpecialTag" class="btn btn-danger" asp-route-id="@Model">
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-trash-alt mx-3"></i>
         </a>
+        </div>
+
+
+
+
     </div>
 </td>

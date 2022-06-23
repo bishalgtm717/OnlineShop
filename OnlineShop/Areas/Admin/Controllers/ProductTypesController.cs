@@ -10,7 +10,7 @@ using OnlineShop.Models;
 namespace OnlineShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles ="Admin,Super User")]
     public class ProductTypesController : Controller
     {
         private ApplicationDbContext _db;
