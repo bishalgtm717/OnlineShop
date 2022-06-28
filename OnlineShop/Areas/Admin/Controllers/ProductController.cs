@@ -9,8 +9,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using OnlineShop.Data;
 using OnlineShop.Models;
+using Dapper;
+using System.Data;
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
@@ -20,11 +23,13 @@ namespace OnlineShop.Areas.Admin.Controllers
     {
         private ApplicationDbContext _db;
         private IHostingEnvironment _he;
+        private readonly IDbConnection _configuration;
 
-        public ProductController(ApplicationDbContext db,IHostingEnvironment he)
+        public ProductController(ApplicationDbContext db,IHostingEnvironment he,IDbConnection configuration)
         {
             _db = db;
             _he = he;
+              _configuration = configuration;
         }
         public IActionResult Index()
         {
@@ -45,42 +50,45 @@ namespace OnlineShop.Areas.Admin.Controllers
         }
 
         //Get Create method
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["productTypeId"]=new  SelectList(_db.ProductTypes.ToList(),"Id", "ProductType");
-            ViewData["TagId"]=new SelectList(_db.SpecialTags.ToList(),"Id","Name");
-           return View();
+            ViewData["productTypeId"] = await _configuration.GetListAsync<ProductTypes>();/*new SelectList(_db.ProductTypes.ToList(), "Id", "ProductType");*/
+            ViewData["TagId"] = await _configuration.GetListAsync<SpecialTag>();
+            return View();
         }
         
 
         //Post Create method
         [HttpPost]
-        public async Task<IActionResult> Create(Products product,IFormFile image)
+        public async Task<IActionResult> Create(Products product)
         {
             if(ModelState.IsValid)
             {
-                var searchProduct = _db.Products.FirstOrDefault(c => c.Name == product.Name);
-                if(searchProduct!=null)
+                var searchProduct =await  _configuration.QueryAsync<Products>("select * from Products where Name=@Name", new {Name=product.Name});
+                //var searchProduct = _db.Products.FirstOrDefault(c => c.Name == product.Name);
+                if(searchProduct.Any())
                 {
                     ViewBag.message = "This product is already exist";
-                    ViewData["productTypeId"] = new SelectList(_db.ProductTypes.ToList(), "Id", "ProductType");
-                    ViewData["TagId"] = new SelectList(_db.SpecialTags.ToList(), "Id", "Name");
+
+                    ViewData["productTypeId"] = await _configuration.GetListAsync<ProductTypes>();
+                    /*new SelectList(_db.ProductTypes.ToList(), "Id", "ProductType");*/
+                    ViewData["TagId"] = await _configuration.GetListAsync<SpecialTag>();
                     return View(product);
                 }
                
-                if(image != null)
+                if(product.image != null)
                 {
-                    var name = Path.Combine(_he.WebRootPath + "/Images", Path.GetFileName(image.FileName));
-                    await image.CopyToAsync(new FileStream(name, FileMode.Create));
-                    product.Image = "Images/" + image.FileName;
+                    var name = Path.Combine(_he.WebRootPath + "/Images", Path.GetFileName(product.image.FileName));
+                    await product.image.CopyToAsync(new FileStream(name, FileMode.Create));
+                    product.Image = "Images/" + product.image.FileName;
                 }
 
-                if(image==null)
+                if(product.image == null)
                 {
                     product.Image = "Images/noimage.PNG";
                 }
-                _db.Products.Add(product);
-                await _db.SaveChangesAsync();
+                await _configuration.InsertAsync<Products>(product); 
+
                 return RedirectToAction(nameof(Index));
             }
 
@@ -89,11 +97,11 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         //GET Edit Action Method
 
-        public ActionResult Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
-            ViewData["productTypeId"] = new SelectList(_db.ProductTypes.ToList(), "Id", "ProductType");
-            ViewData["TagId"] = new SelectList(_db.SpecialTags.ToList(), "Id", "Name");
-            if(id==null)
+            ViewData["productTypeId"] = await _configuration.GetListAsync<ProductTypes>(); 
+            ViewData["TagId"] = await _configuration.GetListAsync<SpecialTag>();
+            if (id==null)
             {
                 return NotFound();
             }
@@ -109,18 +117,18 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         //POST Edit Action Method
         [HttpPost]
-        public async Task<IActionResult> Edit(Products products, IFormFile image)
+        public async Task<IActionResult> Edit(Products products)
         {
             if (ModelState.IsValid)
              {
-                if (image != null)
+                if (products.image != null)
                 {
-                    var name = Path.Combine(_he.WebRootPath + "/Images", Path.GetFileName(image.FileName));
-                    await image.CopyToAsync(new FileStream(name, FileMode.Create));
-                    products.Image = "Images/" + image.FileName;
+                    var name = Path.Combine(_he.WebRootPath + "/Images", Path.GetFileName(products.image.FileName));
+                    await products.image.CopyToAsync(new FileStream(name, FileMode.Create));
+                    products.Image = "Images/" + products.image.FileName;
                 }
 
-                if (image == null)
+                if (products.image == null)
                 {
                     products.Image = "Images/noimage.PNG";
                 }

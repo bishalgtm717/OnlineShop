@@ -52,7 +52,15 @@
                 <label asp-for="ProductTypeId"></label>
             </div>
             <div class="col-5">
-                <select asp-for="ProductTypeId" asp-items="ViewBag.productTypeId" class="form-control"></select>
+                <select asp-for="ProductTypeId" class="form-control">
+                    @foreach(var item in (IEnumerable<ProductTypes>)ViewBag.productTypeId)
+                    { 
+                    <option value="@item.Id">
+                        @item.ProductType
+                       
+</option>
+    }
+                </select>
                 @*<input asp-for="ProductTypeId" class="form-control"/>*@
             </div>
             <span asp-validation-for="ProductTypeId" class="text-danger"></span>
@@ -62,7 +70,15 @@
                 <label asp-for="SpecialTagId"></label>
             </div>
             <div class="col-5">
-                <select asp-for="SpecialTagId" asp-items="ViewBag.TagId" class="form-control"></select>
+                 <select asp-for="SpecialTagId" class="form-control">
+                    @foreach(var item in (IEnumerable<SpecialTag>)ViewBag.TagId)
+                    { 
+                    <option value="@item.Id">
+                        @item.Name
+                       
+</option>
+    }
+                </select>
                 @*<input asp-for="SpecialTagId" class="form-control" />*@
             </div>
             <span asp-validation-for="SpecialTagId" class="text-danger"></span>

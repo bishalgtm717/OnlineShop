@@ -4,12 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace OnlineShop.Models
 {
     public class Products
     {
+       
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
@@ -32,5 +34,9 @@ namespace OnlineShop.Models
         public int SpecialTagId { get; set; }
         [ForeignKey("SpecialTagId")]
         public virtual SpecialTag SpecialTag { get; set; }
+        [NotMapped]
+        public IFormFile image { get; set; }
+
+
     }
 }
