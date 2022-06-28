@@ -33,7 +33,9 @@ namespace OnlineShop.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            return View(_db.Products.Include(c=>c.ProductTypes).Include(f=>f.SpecialTag).ToList());
+            var data = _configuration.GetList<Products>();
+            return View(data);
+            //return View(_db.Products.Include(c=>c.ProductTypes).Include(f=>f.SpecialTag).ToList());
         }
 
         //POST Index action method
@@ -60,7 +62,7 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         //Post Create method
         [HttpPost]
-        public async Task<IActionResult> Create(Products product)
+        public async Task<IActionResult> Create(Products product,IFormFile image)
         {
             if(ModelState.IsValid)
             {
@@ -76,14 +78,14 @@ namespace OnlineShop.Areas.Admin.Controllers
                     return View(product);
                 }
                
-                if(product.image != null)
+                if(image != null)
                 {
-                    var name = Path.Combine(_he.WebRootPath + "/Images", Path.GetFileName(product.image.FileName));
-                    await product.image.CopyToAsync(new FileStream(name, FileMode.Create));
-                    product.Image = "Images/" + product.image.FileName;
+                    var name = Path.Combine(_he.WebRootPath + "/Images", Path.GetFileName( image.FileName));
+                    await  image.CopyToAsync(new FileStream(name, FileMode.Create));
+                    product.Image = "Images/" +  image.FileName;
                 }
 
-                if(product.image == null)
+                if( image == null)
                 {
                     product.Image = "Images/noimage.PNG";
                 }
@@ -105,10 +107,9 @@ namespace OnlineShop.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            var product = _configuration.Get<Products>(id);
 
-            var product = _db.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag)
-                .FirstOrDefault(c => c.Id == id);
-            if(product==null)
+            if (product==null)
             {
                 return NotFound();
             }
@@ -117,23 +118,22 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         //POST Edit Action Method
         [HttpPost]
-        public async Task<IActionResult> Edit(Products products)
+        public async Task<IActionResult> Edit(Products products,IFormFile image)
         {
             if (ModelState.IsValid)
              {
-                if (products.image != null)
+                if ( image != null)
                 {
-                    var name = Path.Combine(_he.WebRootPath + "/Images", Path.GetFileName(products.image.FileName));
-                    await products.image.CopyToAsync(new FileStream(name, FileMode.Create));
-                    products.Image = "Images/" + products.image.FileName;
+                    var name = Path.Combine(_he.WebRootPath + "/Images", Path.GetFileName( image.FileName));
+                    await  image.CopyToAsync(new FileStream(name, FileMode.Create));
+                    products.Image = "Images/" + image.FileName;
                 }
 
-                if (products.image == null)
+                if ( image == null)
                 {
                     products.Image = "Images/noimage.PNG";
                 }
-                _db.Products.Update(products);
-                await _db.SaveChangesAsync();
+                await _configuration.UpdateAsync<Products>(products);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -148,9 +148,9 @@ namespace OnlineShop.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
-            var product = _db.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag)
-                .FirstOrDefault(c => c.Id == id);
+            var product = _configuration.Get<Products>(id);
+            //var product = _db.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag)
+            //    .FirstOrDefault(c => c.Id == id);
             if(product==null)
             {
                 return NotFound();
@@ -160,42 +160,18 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         //GET Delete Action Method
 
-        public ActionResult Delete(int? id)
+        public async Task<ActionResult> Delete(int? id)
         {
             if(id==null)
             {
                 return NotFound();
             }
-
-            var product = _db.Products.Include(c=>c.SpecialTag).Include(c=>c.ProductTypes).Where(c => c.Id == id).FirstOrDefault();
-            if(product==null)
-            {
-                return NotFound();
-            }
-            return View(product);
-        }
-
-        //POST Delete Action Method
-
-        [HttpPost]
-        [ActionName("Delete")]
-        public async Task<IActionResult> DeleteConfirm(int? id)
-        {
-            if(id==null)
-            {
-                return NotFound();
-            }
-
-            var product = _db.Products.FirstOrDefault(c => c.Id == id);
-            if(product==null)
-            {
-                return NotFound();
-            }
-
-            _db.Products.Remove(product);
-            await _db.SaveChangesAsync();
+            var product =await _configuration.DeleteAsync<Products>(id);
+            //var product = _db.Products.Include(c=>c.SpecialTag).Include(c=>c.ProductTypes).Where(c => c.Id == id).FirstOrDefault();
+           
+            TempData["delete"] = "Product has been Deleted";
             return RedirectToAction(nameof(Index));
-        }
+        }    
      
     }
 }

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.Data;
 using OnlineShop.Models;
+using Dapper;
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
@@ -13,16 +15,19 @@ namespace OnlineShop.Areas.Admin.Controllers
     [Authorize(Roles ="Admin,Super User")]
     public class ProductTypesController : Controller
     {
-        private ApplicationDbContext _db;
+        private ApplicationDbContext _db; 
+        private readonly IDbConnection _dapper;
 
-        public ProductTypesController(ApplicationDbContext db)
+        public ProductTypesController(ApplicationDbContext db, IDbConnection dapper)
         {
             _db = db;
+            _dapper = dapper;
         }
         [AllowAnonymous]
         public IActionResult Index()
         {
             var data = _db.ProductTypes.ToList();
+            //var data = _dapper.GetListAsync<ProductTypes>();
             return View(data);
         }
 
@@ -40,9 +45,8 @@ namespace OnlineShop.Areas.Admin.Controllers
         public async Task<IActionResult> Create(ProductTypes productTypes)
         {
             if(ModelState.IsValid)
-            {
-                _db.ProductTypes.Add(productTypes);
-                await _db.SaveChangesAsync();
+            { 
+                await _dapper.InsertAsync<ProductTypes>(productTypes);
                 TempData["save"] = "Product type has been saved";
                 return RedirectToAction(nameof(Index));
             }
@@ -75,8 +79,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Update(productTypes);
-                await _db.SaveChangesAsync();
+                await _dapper.UpdateAsync<ProductTypes>(productTypes);
                 TempData["edit"] = "Product type has been updated";
                 return RedirectToAction(nameof(Index));
             }
