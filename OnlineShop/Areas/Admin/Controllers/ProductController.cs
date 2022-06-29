@@ -145,16 +145,20 @@ namespace OnlineShop.Areas.Admin.Controllers
         }
 
         //GET Details Action Method
-        public ActionResult Details(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
 
             if(id==null)
             {
                 return NotFound();
             }
-            var product = _configuration.Get<Products>(id);
-            //var product = _db.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag)
-            //    .FirstOrDefault(c => c.Id == id);
+            var product = await _configuration.QueryFirstOrDefaultAsync<Products>(@"select p.*,pt.ProductType as 'ProductTypeName',sta.Name as 'SpecialTagName' from Products p
+                                                                left join ProductTypes pt on p.ProductTypeId = pt.Id
+                                                                left join SpecialTags sta on p.SpecialTagId = sta.Id
+                                                                    where p.Id=@id                                                                
+                                                                    order by p.Id desc", new { id = id });
+            //var product = _configuration.Get<Products>(id);
+           
             if(product==null)
             {
                 return NotFound();

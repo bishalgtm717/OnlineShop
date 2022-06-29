@@ -53,6 +53,8 @@
             </div>
             <div class="col-5">
                 <select asp-for="ProductTypeId" class="form-control">
+                      
+                            <option class="" value="0">Select..</option>
                     @foreach(var item in (IEnumerable<ProductTypes>)ViewBag.productTypeId)
                     { 
                     <option value="@item.Id">
@@ -71,6 +73,8 @@
             </div>
             <div class="col-5">
                  <select asp-for="SpecialTagId" class="form-control">
+                     
+                            <option class="" value="0">Select..</option>
                     @foreach(var item in (IEnumerable<SpecialTag>)ViewBag.TagId)
                     { 
                     <option value="@item.Id">

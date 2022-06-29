@@ -11,7 +11,7 @@ namespace OnlineShop.Models
 {
     public class Products
     {
-       
+
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
@@ -23,14 +23,17 @@ namespace OnlineShop.Models
         [Required]
         [Display(Name = "Available")]
         public bool IsAvailable { get; set; }
-        
+
         [Display(Name = "Product Type")]
+        
         [Required]
+        [Range(1, 100, ErrorMessage = "Select Valid Product Type")]
         public int ProductTypeId { get; set; }
         [ForeignKey("ProductTypeId")]
         public virtual ProductTypes ProductTypes { get; set; }
         [Display(Name = "Special Tag")]
         [Required]
+        [Range(1, 100, ErrorMessage = "Select Valid Special Tag")] 
         public int SpecialTagId { get; set; }
         [ForeignKey("SpecialTagId")]
         public virtual SpecialTag SpecialTag { get; set; }

@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-8">
                     @*<select asp-for="ProductTypeId" asp-items="ViewBag.productTypeId" class="form-control"></select>*@
-                    <input asp-for="ProductTypeId" readonly="readonly" class="form-control"/>
+                    <input asp-for="ProductTypeName" readonly="readonly" class="form-control"/>
                 </div>
                 <span asp-validation-for="ProductTypeId" class="text-danger"></span>
             </div>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-8">
                     @*<select asp-for="SpecialTagId" asp-items="ViewBag.TagId" class="form-control"></select>*@
-                    <input asp-for="SpecialTagId" readonly="readonly" class="form-control" />
+                    <input asp-for="SpecialTagName" readonly="readonly" class="form-control" />
                 </div>
                 <span asp-validation-for="SpecialTagId" class="text-danger"></span>
             </div>
