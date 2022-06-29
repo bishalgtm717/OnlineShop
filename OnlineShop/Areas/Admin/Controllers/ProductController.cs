@@ -31,23 +31,28 @@ namespace OnlineShop.Areas.Admin.Controllers
             _he = he;
               _configuration = configuration;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _configuration.GetList<Products>();
-            return View(data);
-            //return View(_db.Products.Include(c=>c.ProductTypes).Include(f=>f.SpecialTag).ToList());
+            var data = await _configuration.QueryAsync<Products>(@"select p.*,pt.ProductType as 'ProductTypeName',sta.Name as 'SpecialTagName' from Products p
+                                                                left join ProductTypes pt on p.ProductTypeId = pt.Id
+                                                                left join SpecialTags sta on p.SpecialTagId = sta.Id
+                                                                order by p.Id desc");
+ 
+            return View(data); 
         }
 
         //POST Index action method
        [HttpPost]
-        public IActionResult Index(decimal? lowAmount, decimal? largeAmount)
+        public async Task<IActionResult> Index( decimal? lowAmount, decimal? largeAmount)
         {
-            var products = _db.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag)
-                .Where(c => c.Price >= lowAmount && c.Price <= largeAmount).ToList();
-            if(lowAmount==null ||largeAmount==null)
-            {
-               products = _db.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag).ToList();
-            }
+            var products = await _configuration.QueryAsync<Products>(@"select p.*,pt.ProductType as 'ProductTypeName',sta.Name as 'SpecialTagName' from Products p
+                                                                        left join ProductTypes pt on p.ProductTypeId=pt.Id
+                                                                        left join SpecialTags sta on p.SpecialTagId=sta.Id
+                                                                       where (p.Price>=@lowAmount or @lowAmount is null) and (p.Price<=@largeAmount or @largeAmount is null)
+                                                                        order by p.Id desc ", new {lowAmount, largeAmount});
+            ViewBag.lowAmount=lowAmount;
+            ViewBag.largeAmount = largeAmount;
+
             return View(products);
         }
 
@@ -72,8 +77,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                 {
                     ViewBag.message = "This product is already exist";
 
-                    ViewData["productTypeId"] = await _configuration.GetListAsync<ProductTypes>();
-                    /*new SelectList(_db.ProductTypes.ToList(), "Id", "ProductType");*/
+                    ViewData["productTypeId"] = await _configuration.GetListAsync<ProductTypes>(); 
                     ViewData["TagId"] = await _configuration.GetListAsync<SpecialTag>();
                     return View(product);
                 }

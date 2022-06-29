@@ -34,6 +34,11 @@ namespace OnlineShop.Models
         public int SpecialTagId { get; set; }
         [ForeignKey("SpecialTagId")]
         public virtual SpecialTag SpecialTag { get; set; }
+        [NotMapped]
+        public string SpecialTagName { get; set; }
+        [NotMapped]
+        public string ProductTypeName { get; set; }
+
         //[NotMapped]
         //public IFormFile image { get; set; }
 
