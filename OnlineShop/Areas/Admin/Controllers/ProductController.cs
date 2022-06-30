@@ -71,7 +71,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         {
             if(ModelState.IsValid)
             {
-                var searchProduct =await  _configuration.QueryAsync<Products>("select * from Products where Name=@Name", new {Name=product.Name});
+                var searchProduct =await  _configuration.QueryAsync<Products>("select 1 from Products where Name=@Name", new {Name=product.Name});
                 //var searchProduct = _db.Products.FirstOrDefault(c => c.Name == product.Name);
                 if(searchProduct.Any())
                 {
