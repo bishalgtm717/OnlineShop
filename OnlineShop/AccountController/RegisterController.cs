@@ -47,7 +47,7 @@ namespace OnlineShop.AccountController
             ReturnUrl = returnUrl;
         }
         [HttpGet]
-        [Route("Identity/Account/Register")]
+        [Route("account/register")]
         public async Task<IActionResult> Register()
 
         {
@@ -55,7 +55,7 @@ namespace OnlineShop.AccountController
         }
 
             [HttpPost]
-        [Route("Identity/Account/Register")]
+        [Route("account/register")]
         public async Task<IActionResult> Register(Register register, string returnUrl = null)
         {
             var user = new ApplicationUser { UserName = register.Email,Email=register.Email   };
@@ -63,9 +63,9 @@ namespace OnlineShop.AccountController
             if (result.Succeeded)
             {
 
-                return View(result);
+                return Redirect("/");
             }
-            return View("/");
+            return Redirect("/");
         }
     }
 }

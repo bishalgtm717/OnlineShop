@@ -1,11 +1,9 @@
-﻿@*@page
-@model RegisterModel
+﻿  @model OnlineShop.Models.Login
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Log in";
 }
- 
-  <style>
-     	 
+ <style>
+     	/* Coded with love by Mutiullah Samim */
 		body,
 		html {
 			margin: 0;
@@ -76,15 +74,15 @@
 			background-color: #c0392b !important;
 		}
  </style>
- 	<div class="container h-100">
+ <div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
 			 
 				<div class="d-flex justify-content-center form_container">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-
-            <h3 >Create An Account</h3>
-			  <div class="input-group mb-3">
+            <form id="account" method="post">
+               
+                <div asp-validation-summary="All" class="text-dark">Login</div>
+                <div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
@@ -96,24 +94,40 @@
 							</div>
 							<input type="password" name="Input.Password" class="form-control input_pass" value="" placeholder="password">
 						</div>
-						<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
+              
+						<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customControlInline">
+								<label class="custom-control-label" for="customControlInline">Remember me</label>
 							</div>
-							<input type="password" name="Input.ConfirmPassword" class="form-control input_pass" value="" placeholder="Repeat Your password">
-						<span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-     
 						</div>
-						  
+ 
+
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="submit"  class="btn login_btn">Login</button>
+				   </div>
+					 
+			 
+		
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Don't have an account? <a class="ml-2 text-white" asp-action="account/Register" asp-route-returnUrl="">Sign Up</a>
 						 
-            <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+					</div>
+					<div class="d-flex justify-content-center links">
+						<a class="text-white" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+					</div>
+				</div>
+				 
+            </form>
+         
     </div>
+    
 </div>
-  </div>
+</div>
+    
 </div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
-*@
