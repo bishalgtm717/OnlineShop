@@ -47,6 +47,13 @@ namespace OnlineShop.AccountController
             ReturnUrl = returnUrl;
         }
         [HttpGet]
+        [Route("account/formodel")]
+        public async Task<IActionResult> ForModelPopUp()
+
+        {
+            return View();
+        }
+        [HttpGet]
         [Route("account/register")]
         public async Task<IActionResult> Register()
 
@@ -63,7 +70,7 @@ namespace OnlineShop.AccountController
             if (result.Succeeded)
             {
 
-                return Redirect("/");
+                return Redirect("/account/formodel");
             }
             return Redirect("/");
         }
