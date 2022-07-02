@@ -67,6 +67,13 @@ namespace OnlineShop.AccountController
         {
             var user = new ApplicationUser { UserName = register.Email,Email=register.Email   };
             var result = await _userManager.CreateAsync(user, register.Password);
+            var registeruser = await _configuration.QuerySingleOrDefaultAsync<IdentityUsers>("select * from AspNetUsers where Email=@email", new {email=register.Email});
+            var userroleselect = await _configuration.QuerySingleOrDefaultAsync<Roles>("select * from Roles where Name=@name", new {name="user"});
+
+            UserRoles userRoles = new UserRoles();
+            userRoles.UserId = registeruser.Id;
+            userRoles.RoleId =userroleselect.Id;
+            await _configuration.InsertAsync<UserRoles>(userRoles);
             if (result.Succeeded)
             {
 

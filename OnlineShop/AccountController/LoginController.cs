@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using OnlineShop.Areas.Admin.Models;
 using OnlineShop.Data;
 using OnlineShop.Models;
+using System.Data;
+using Dapper;
 
 
 namespace OnlineShop.Areas.Identity.Pages.Account
@@ -21,34 +23,41 @@ namespace OnlineShop.Areas.Identity.Pages.Account
     public class LoginController : Controller
     {
         private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly ILogger<LoginModel> _logger;
         UserManager<IdentityUser> _userManager;
         private ApplicationDbContext _db;
+        private readonly IDbConnection _configuration;
 
-
-        public LoginController(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, UserManager<IdentityUser> userManager, ApplicationDbContext db)
+        public LoginController(SignInManager<IdentityUser> signInManager,UserManager<IdentityUser> userManager, ApplicationDbContext db, IDbConnection configuration)
         {
             _signInManager = signInManager;
-            _userManager = userManager;
-            _logger = logger;
+            _userManager = userManager; 
+            _db = db;
+            _configuration = configuration;
         }
+        [Route("account/login")]
         public async Task<IActionResult> Login()
         {
             return View();
         }
 
-            public async Task<IActionResult> Login(Login login, string returnUrl = null)
+
+        [HttpPost]
+        [Route("account/login")]
+        public async Task<IActionResult> Login(Login login, string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
 
             if (ModelState.IsValid)
-            {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+            { 
                 var result = await _signInManager.PasswordSignInAsync(login.Email, login.Password, login.RememberMe, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
+
                     var userInfo = _db.ApplicationUsers.FirstOrDefault(c => c.UserName.ToLower() == login.Email.ToLower());
+//                    var roleInfo = await _configuration.QueryAsync<Role>(@"select asr.Name as RoleName,anu.UserName from AspNetUserRoles aur
+//inner join AspNetRoles asr on aur.RoleId = asr.Id
+//inner join AspNetUsers anu on aur.UserId = anu.Id
+//where anu.Id =@userId", new { userId = userInfo.Id });
                     var roleInfo = (from ur in _db.UserRoles
                                     join r in _db.Roles on ur.RoleId equals r.Id
                                     where ur.UserId == userInfo.Id
@@ -61,18 +70,9 @@ namespace OnlineShop.Areas.Identity.Pages.Account
                     {
                         HttpContext.Session.SetString("roleName", roleInfo.RoleName);
                     }
-                    _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = login.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToPage("./Lockout");
-                }
+                
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
@@ -85,4 +85,4 @@ namespace OnlineShop.Areas.Identity.Pages.Account
         }
     }
 
-}
+} 
