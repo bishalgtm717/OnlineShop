@@ -53,11 +53,7 @@ namespace OnlineShop.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
 
-                    var userInfo = _db.ApplicationUsers.FirstOrDefault(c => c.UserName.ToLower() == login.Email.ToLower());
-//                    var roleInfo = await _configuration.QueryAsync<Role>(@"select asr.Name as RoleName,anu.UserName from AspNetUserRoles aur
-//inner join AspNetRoles asr on aur.RoleId = asr.Id
-//inner join AspNetUsers anu on aur.UserId = anu.Id
-//where anu.Id =@userId", new { userId = userInfo.Id });
+                    var userInfo = _db.ApplicationUsers.FirstOrDefault(c => c.UserName.ToLower() == login.Email.ToLower()); 
                     var roleInfo = (from ur in _db.UserRoles
                                     join r in _db.Roles on ur.RoleId equals r.Id
                                     where ur.UserId == userInfo.Id
@@ -76,7 +72,8 @@ namespace OnlineShop.Areas.Identity.Pages.Account
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return Redirect("/");
+                    ModelState.AddModelError("Password", "Incorrect Password.");
+                    return View(login);
                 }
             }
 

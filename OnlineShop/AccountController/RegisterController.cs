@@ -10,6 +10,7 @@ using static Microsoft.AspNetCore.Identity.UI.V3.Pages.Account.Internal.External
 using Dapper;
 using System.Threading.Tasks;
 using OnlineShop.Models;
+using System.Linq;
 
 namespace OnlineShop.AccountController
 {
@@ -37,15 +38,8 @@ namespace OnlineShop.AccountController
             _logger = logger;
             _emailSender = emailSender;
         }
-        //[BindProperty]
-        //public InputModel Input { get; set; }
-
         public string ReturnUrl { get; set; }
 
-        public void OnGet(string returnUrl = null)
-        {
-            ReturnUrl = returnUrl;
-        }
         [HttpGet]
         [Route("account/formodel")]
         public async Task<IActionResult> ForModelPopUp()
@@ -63,23 +57,49 @@ namespace OnlineShop.AccountController
 
             [HttpPost]
         [Route("account/register")]
-        public async Task<IActionResult> Register(Register register, string returnUrl = null)
+        public async Task<IActionResult> Register(Register register)
         {
-            var user = new ApplicationUser { UserName = register.Email,Email=register.Email   };
-            var result = await _userManager.CreateAsync(user, register.Password);
-            var registeruser = await _configuration.QuerySingleOrDefaultAsync<IdentityUsers>("select * from AspNetUsers where Email=@email", new {email=register.Email});
-            var userroleselect = await _configuration.QuerySingleOrDefaultAsync<Roles>("select * from Roles where Name=@name", new {name="user"});
+            try
+            {
+                var user = new ApplicationUser
+                {
+                    UserName = register.Email,
+                    Email = register.Email,
+                    PhoneNumber = register.PhoneNumber,
+                    FirstName = register.FirstName,
+                    LastName = register.LastName
 
-            UserRoles userRoles = new UserRoles();
-            userRoles.UserId = registeruser.Id;
-            userRoles.RoleId =userroleselect.Id;
-            await _configuration.InsertAsync<UserRoles>(userRoles);
-            if (result.Succeeded)
+                };
+                 var checkdublicate= await _configuration.QuerySingleOrDefaultAsync<IdentityUsers>("select Id from AspNetUsers where Email=@email", new {email=user.Email});
+                if (checkdublicate.Id==null)
+                {
+                    var result = await _userManager.CreateAsync(user, register.Password);
+                    var registeruser = await _configuration.QuerySingleOrDefaultAsync<IdentityUsers>("select Id from AspNetUsers where Email=@email", new { email = register.Email });
+                    var userroleselect = await _configuration.QuerySingleOrDefaultAsync<Roles>("select * from AspNetRoles where Name=@name", new { name = "User" });
+                    var user1 = _db.ApplicationUsers.FirstOrDefault(c => c.Id == registeruser.Id);
+                    await _userManager.AddToRoleAsync(user1, userroleselect.Name);
+                    if (result.Succeeded)
+                    {
+
+                        return Redirect("/account/formodel");
+                    }
+                 
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "UserName already Exists.");
+                    return View(register);
+                }
+                
+                return Redirect("/");
+            }
+            catch (System.Exception)
             {
 
-                return Redirect("/account/formodel");
+                throw;
             }
-            return Redirect("/");
+           
+           
         }
     }
 }

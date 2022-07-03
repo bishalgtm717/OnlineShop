@@ -2,132 +2,128 @@
 @{
     ViewData["Title"] = "Log in";
 }
- <style>
-     	/* Coded with love by Mutiullah Samim */
-		body,
-		html {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			background: #60a3bc !important;
-		}
-		.user_card {
-			height: 400px;
-			width: 350px;
-			margin-top: auto;
-			margin-bottom: auto;
-			background: #f39c12;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			padding: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+ <head>  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+  rel="stylesheet"
+/></head>
+<section class="background-radial-gradient overflow-hidden">
+  <style>
+    .background-radial-gradient {
+      background-color: hsl(218, 41%, 15%);
+      background-image: radial-gradient(650px circle at 0% 0%,
+          hsl(218, 41%, 35%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+          hsl(218, 41%, 45%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%);
+    }
 
-		}
-		.brand_logo_container {
-			position: absolute;
-			height: 170px;
-			width: 170px;
-			top: -75px;
-			border-radius: 50%;
-			background: #60a3bc;
-			padding: 10px;
-			text-align: center;
-		}
-		.brand_logo {
-			height: 150px;
-			width: 150px;
-			border-radius: 50%;
-			border: 2px solid white;
-		}
-		.form_container {
-			margin-top: 100px;
-		}
-		.login_btn {
-			width: 100%;
-			background: #c0392b !important;
-			color: white !important;
-		}
-		.login_btn:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-		.login_container {
-			padding: 0 2rem;
-		}
-		.input-group-text {
-			background: #c0392b !important;
-			color: white !important;
-			border: 0 !important;
-			border-radius: 0.25rem 0 0 0.25rem !important;
-		}
-		.input_user,
-		.input_pass:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-			background-color: #c0392b !important;
-		}
- </style>
- <div class="container h-100">
-		<div class="d-flex justify-content-center h-100">
-			<div class="user_card">
-			 
-				<div class="d-flex justify-content-center form_container">
-            <form id="account" method="post">
-               
-                <div class="text-dark">Login</div>
-                <div class="input-group mb-3">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
-							</div>
-							<input type="text" name="Email" class="form-control input_user" value="" placeholder="Email">
-						</div>
-         	<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
-							</div>
-							<input type="password" name="Password" class="form-control input_pass" value="" placeholder="password">
-						</div>
+    #radius-shape-1 {
+      height: 220px;
+      width: 220px;
+      top: -60px;
+      left: -130px;
+      background: radial-gradient(#44006b, #ad1fff);
+      overflow: hidden;
+    }
+
+    #radius-shape-2 {
+      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+      bottom: -60px;
+      right: -110px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(#44006b, #ad1fff);
+      overflow: hidden;
+    }
+
+    .bg-glass {
+      background-color: hsla(0, 0%, 100%, 0.9) !important;
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+  </style>
+
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          Log In Account <br />
+          <span style="color: hsl(218, 81%, 75%)">for your business</span>
+        </h1>
+       
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form autocomplete="off" asp-action="Login" asp-controller="Login" method="post">
               
-						<div class="form-group">
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customControlInline">
-								<label class="custom-control-label" for="customControlInline">Remember me</label>
-							</div>
-						</div>
- 
 
-							<div class="d-flex justify-content-center mt-3 login_container">
-				 	<button type="submit"  class="btn login_btn">Login</button>
-				   </div>
-					 
-			 
-		
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Don't have an account? <a class="ml-2 text-white" asp-action="account/Register" asp-route-returnUrl="">Sign Up</a>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="form3Example3" name="Email" class="form-control" />
+                <label class="form-label" for="Email">Email address</label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" name="Password" class="form-control" />
+                <label class="form-label" for="Password">Password</label>
+                @*<span asp-validation-for="Password" class="text-danger"></span>*@
+              </div>
+
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" asp-for="RememberMe" id="form2Example33" checked />
+                <label class="form-check-label" for="RememberMe">
+                  Remember Me
+                </label>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Login
+              </button>
+               <div class="d-flex justify-content-center links">
+						Don't have an account? <a class="ml-2 text-dark" href="/account/register">Sign Up</a>
 						 
 					</div>
 					<div class="d-flex justify-content-center links">
-						<a class="text-white" id="forgot-password">Forgot your password?</a>
+						<a class="text-dark" id="forgot-password">Forgot your password?</a>
 					</div>
-				</div>
-				 
             </form>
-         
+            <div asp-validation-summary="All" class="text-danger"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-</div>
-</div>
-    
-</div>
-
+  </div>
+</section>
+<!-- Section: Design Block -->
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js">
+  </script>
+ 
