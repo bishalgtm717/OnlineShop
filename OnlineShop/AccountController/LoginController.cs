@@ -71,7 +71,6 @@ namespace OnlineShop.Areas.Identity.Pages.Account
                 
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                     ModelState.AddModelError("Password", "Incorrect Password.");
                     return View(login);
                 }

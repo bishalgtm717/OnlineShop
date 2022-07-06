@@ -27,7 +27,7 @@ padding-right: .75em;
 top: 13px;
 }
 </style>
-            <form autocomplete="off" asp-action="Register" asp-controller="Register" method="post">
+  <form autocomplete="off" asp-action="Register" asp-controller="Register" method="post">
   <section class="h-100 bg-dark">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -84,11 +84,11 @@ top: 13px;
                 </div>
   
                 <div class="form-outline mb-4">
-                  <input type="text" name="Email" id="form3Example97" class="form-control form-control-lg" />
+                  <input type="text" name="Email" id="form3Example97" autocomplete="off" class="form-control form-control-lg" />
                   <label class="form-label" for="Email">Email ID</label>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="password" name="Password" id="form3Example97" class="form-control form-control-lg" />
+                  <input type="password" name="Password" id="form3Example97" autocomplete="off" class="form-control form-control-lg" />
                   <label class="form-label" for="Email">Password</label>
                 </div> 
                 <div class="form-outline mb-4">
@@ -100,6 +100,7 @@ top: 13px;
                   <a type="button" href="/" class="btn btn-light btn-lg">Cancel</a>
                   <button type="submit" class="btn btn-warning btn-lg ms-2">Submit</button>
                 </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
 
               </div>
             </div>
@@ -109,9 +110,10 @@ top: 13px;
     </div>
   </div>
 </section>
+
             </form>
             
-            <div asp-validation-summary="All" class="text-danger"></div>
+            @*<div asp-validation-summary="All" class="text-danger"></div>*@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

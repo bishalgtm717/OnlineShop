@@ -61,37 +61,43 @@ namespace OnlineShop.AccountController
         {
             try
             {
-                var user = new ApplicationUser
+                if (ModelState.IsValid)
                 {
-                    UserName = register.Email,
-                    Email = register.Email,
-                    PhoneNumber = register.PhoneNumber,
-                    FirstName = register.FirstName,
-                    LastName = register.LastName
 
-                };
-                 var checkdublicate= await _configuration.QuerySingleOrDefaultAsync<IdentityUsers>("select Id from AspNetUsers where Email=@email", new {email=user.Email});
-                if (checkdublicate.Id==null)
-                {
-                    var result = await _userManager.CreateAsync(user, register.Password);
-                    var registeruser = await _configuration.QuerySingleOrDefaultAsync<IdentityUsers>("select Id from AspNetUsers where Email=@email", new { email = register.Email });
-                    var userroleselect = await _configuration.QuerySingleOrDefaultAsync<Roles>("select * from AspNetRoles where Name=@name", new { name = "User" });
-                    var user1 = _db.ApplicationUsers.FirstOrDefault(c => c.Id == registeruser.Id);
-                    await _userManager.AddToRoleAsync(user1, userroleselect.Name);
-                    if (result.Succeeded)
+                    var user = new ApplicationUser
                     {
+                        UserName = register.Email,
+                        Email = register.Email,
+                        PhoneNumber = register.PhoneNumber,
+                        FirstName = register.FirstName,
+                        LastName = register.LastName
+
+                    };
+                    var checkdublicate = await _configuration.QuerySingleOrDefaultAsync<IdentityUsers>("select Id from AspNetUsers where Email=@email", new { email = user.Email });
+                    if (checkdublicate == null)
+                    {
+                        var result = await _userManager.CreateAsync(user, register.Password);
+                        var registeruser = await _configuration.QuerySingleOrDefaultAsync<IdentityUsers>("select Id from AspNetUsers where Email=@email", new { email = register.Email });
+                        var userroleselect = await _configuration.QuerySingleOrDefaultAsync<Roles>("select * from AspNetRoles where Name=@name", new { name = "User" });
+                        var user1 = _db.ApplicationUsers.FirstOrDefault(c => c.Id == registeruser.Id);
+                        await _userManager.AddToRoleAsync(user1, userroleselect.Name);
 
                         return Redirect("/account/formodel");
+
                     }
-                 
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "UserName already Exists.");
+                        return View(register);
+                    }
+                    //return Redirect("/account/formodel");
+
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "UserName already Exists.");
                     return View(register);
+
                 }
-                
-                return Redirect("/");
             }
             catch (System.Exception)
             {

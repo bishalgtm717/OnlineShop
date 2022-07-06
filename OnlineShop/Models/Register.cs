@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace OnlineShop.Models
 {
@@ -16,6 +17,9 @@ namespace OnlineShop.Models
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
+       
+        [Required]
+        public DateTime DOB { get; set; }
             public string Id { get; set; }
 
             [Required]
