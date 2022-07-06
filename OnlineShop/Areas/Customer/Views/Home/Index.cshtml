@@ -67,7 +67,7 @@
                     </a>
                      <ul class="social">
                         <li><a asp-action="Detail" asp-controller="Home" asp-route-id="@product.Id" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        
                     </ul>
                     <span class="product-new-label">Sale</span>
                     <span class="product-discount-label">20%</span>
@@ -75,10 +75,12 @@
                 
                 <div class="product-content">
                     <h3 class="title"><a href="#">@product.Name</a></h3>
-                    <div class="price">Rs.@product.Price
-                        <span>Rs.@product.Price</span>
+                    <div class="price">Rs.@(product.Price-(product.Price * 20)/100)
+                        <span class="text-danger">Rs.@product.Price</span>
                     </div>
-                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                    <form asp-action="Detail" method="post" asp-route-id="@product.Id" enctype="multipart/form-data">
+                    <input type="submit" class="btn btn-danger form-control" value="Add to Cart" />
+</form>
                 </div>
             </div>
         </div>
