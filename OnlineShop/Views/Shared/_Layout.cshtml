@@ -34,6 +34,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     </environment>
+
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" />
@@ -54,6 +55,127 @@
     </style>
 </head>
 <body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="fas fa-times fs-4 text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info p-3 d-flex align-items-center">
+                    <img src="assets/images/faces/1.jpg" alt="profile_pic" style="width:60px;" class="rounded-pill me-2">
+                    <div class="ps-2 lh-sm sidebar-user-profile">
+                        <p class="profile-user-name  mb-0">John Doe</p>
+                        <span class="user-role">Super Admin</span>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-item">
+                            <a href="index.html" class='sidebar-link'>
+                                <i class="fas fa-th-large"></i>
+                                <span>Bus Ticket</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item active">
+                            <a href="my-bookings.html" class='sidebar-link'>
+                                <i class="fas fa-bus"></i>
+                                <span>My Bookings</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="staff.html" class='sidebar-link'>
+                                <i class="fas fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="reports.html" class='sidebar-link'>
+                                <i class="fas fa-file-invoice"></i>
+                                <span>My Activities</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+               <!--  <button class="sidebar-toggler btn x"><i class="fas fa-times fs-4 text-white"></i></button> -->
+            </div>
+        </div><!-- sidebar-->
+        <div id="main">
+            <div class="topbar px-3">
+                <div class="container-fluid w-100 d-flex align-items-center">
+                    <div class="my-2">
+                        <a href="#" class="burger-btn d-block ">
+                            <i class="fas fa-bars fs-4 text-white"></i>
+                        </a>
+                    </div>
+                    <ul class="nav navbar-right ms-auto d-flex align-items-center header-right-wrapper">
+                        <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                  <i class="fas fa-bell"></i>
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <a href="#" class="dropdown-item py-2 d-flex justify-content-between">
+                                  <p class="mb-0 font-weight-medium float-start">You have 3 new notifications</p>
+                                  <span class="badge bg-primary float-end ms-2">View all</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <li>
+                                    <a href="#" class="dropdown-item preview-item">
+                                        <p class="m-0">Driver added to Mayur yatayat</p>
+                                    </a>
+                                </li>
+                                <li><a class="dropdown-item preview-item" href="#">New user added to vehicle BA-1 cha 232332</a></li>
+                                <li><a class="dropdown-item preview-item" href="#">User successfully deleted</a></li>
+                              </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                  <img src="assets/images/faces/1.jpg" alt="Logo" style="width:40px;" class="rounded-pill me-2">
+                                  <!-- <span class="user-name">John Doe</span> -->
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user me-2"></i>Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-cog me-2"></i>Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-sign-out-alt me-2"></i>Log out
+                                    </a>
+                                </li>
+                              </ul>
+                        </li>
+                    </ul><!-- right nav-->
+                </div><!-- container fluid-->
+            </div><!-- topbar-->
+
+            <div class="content p-4">
+                <div class="page-content">
+                    <div class="row">
+                        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </body>
+@*<body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
@@ -121,7 +243,7 @@
     </footer>
 
     <environment include="Development">
-        @*<script src="https://code.jquery.com/jquery-3.3.1.js"></script>*@
+        @*<script src="https://code.jquery.com/jquery-3.3.1.js"></script>*@@*
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
@@ -151,7 +273,7 @@
 
 
     @RenderSection("Scripts", required: false)
-</body>
+</body>*@
 </html>
 
 
